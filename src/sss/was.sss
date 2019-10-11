@@ -28,3 +28,40 @@
         padding: 0 20px
         box-sizing: content-box
         overflow: hidden
+
+@media (min-width: 660px)
+    .it-was
+
+        &__pagination
+            display: none
+
+@media (max-width: 1500px)
+    .it-was
+        padding: 40px 0
+
+        &__title
+            margin: 0 0 30px
+
+@media (max-width: 660px)
+    .it-was
+        
+        &__title
+
+            &-text
+                font-size: em(30)
+
+            &-arrow
+                display: none
+
+        &__pagination
+
+            .swiper-pagination
+                position: static
+
+                &-bullet
+
+                    &:not(:last-child)
+                        margin-right: 18px
+
+                    &-active
+                        background: #BA8D61

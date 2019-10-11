@@ -31,3 +31,54 @@
         font-size: em(20)
         line-height: calc(26 / 20)
         margin: 40px 0 0
+
+@media (max-width: 1500px) and (min-width: 660px)
+    .opportunities
+        padding: 60px 0 80px
+
+        &__title
+            margin: 0 0 40px
+
+@media (max-width: 1000px) and (min-width: 660px)
+    .opportunities
+            
+        &__list
+            margin: 0 0 -50px
+                
+            &-item
+                padding: 0 10px
+                margin-bottom: 50px
+
+@media (max-width: 660px)
+    .opportunities
+        padding: 30px 0
+
+        &__title
+            margin: 0 0 20px
+            
+        &__list
+            margin: 0
+            display: block
+                
+            &-item
+                padding: 0
+                margin: 0
+                width: auto
+
+                &:not(:first-child)
+                    margin: 20px 0 0 !important
+
+    .apportunity
+        display: flex
+
+        &__img
+            height: auto
+            flex: none
+            width: 50px
+            margin-right: 20px
+
+        &__text
+            text-align: left
+            margin: 0
+            font-size: 16px
+            align-self: center

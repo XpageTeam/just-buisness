@@ -1,10 +1,5 @@
 .counters
     background: #FAF7F4
-    padding: 175px 0 165px
-
-    &__list
-        display: flex
-        justify-content: space-around
 
 .counter
     position: relative
@@ -21,3 +16,53 @@
         font-size: em(30)
         line-height: 110%
         transform: translateY(-50%)
+
+@media (min-width: 1500px)
+    .counters
+        padding: 175px 0 165px
+
+@media (min-width: 1000px)
+    .counters
+
+        &__list
+            display: flex
+            justify-content: space-around
+
+@media (max-width: 1500px) and (min-width: 1000px)
+    .counters
+        padding: 100px 0 80px
+
+@media (max-width: 1000px) and (min-width: 660px)
+    .counters
+        padding: 40px 0
+
+@media (max-width: 1000px)
+    .counter
+
+        &__number
+            font-size: 3em
+            width: 60px
+            display: inline-block
+
+        &__text
+            display: inline
+            position: static
+            white-space: normal
+            transform: none
+
+            br
+                display: none
+
+    .counters
+
+        &__list
+
+            &-item
+                
+                &:not(:first-child)
+                    margin: 25px 0 0
+
+@media (max-width: 660px)
+    .counters
+        padding: 30px 0
+        font-size: 12px

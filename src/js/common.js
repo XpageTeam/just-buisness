@@ -72,10 +72,9 @@ document.addEventListener("DOMContentLoaded", function(){
 			}
 		})
 
-	new Swiper(".partners-list", {
+	const partnersSlider = new Swiper(".partners-list", {
 		slidesPerView: 4,
 		spaceBetween: 30,
-		loop: true,
 		dynamicBullets: true,
 		keyboard: {
 			enabled: true,
@@ -85,13 +84,44 @@ document.addEventListener("DOMContentLoaded", function(){
 			el: ".partners-list .swiper-pagination",
 			type: "bullets",
 			clickable: true,
-			dynamicBullets: true,
 		},
 		breakpoints: {
 			660: {
 				slidesPerView: 2
 			}
 		}
+	})
+
+	$(".partners__title .main-title").click(function(){
+		const id = $(this).attr("data-target");
+
+		const slidesForDisable = partnersSlider.el
+			.querySelectorAll(`.swiper-slide:not([data-id="${id}"])`);
+
+		for (const slide of slidesForDisable)
+			slide.style.display = "none"
+
+		for (const slide of partnersSlider.el
+			.querySelectorAll(`.swiper-slide[data-id="${id}"]`))
+			slide.style.display = "block"
+
+		partnersSlider.update()
+	})
+
+	$(".partners__title select").change(function(){
+		const id = $(this).val();
+
+		const slidesForDisable = partnersSlider.el
+			.querySelectorAll(`.swiper-slide:not([data-id="${id}"])`);
+
+		for (const slide of slidesForDisable)
+			slide.style.display = "none"
+
+		for (const slide of partnersSlider.el
+			.querySelectorAll(`.swiper-slide[data-id="${id}"]`))
+			slide.style.display = "block"
+
+		partnersSlider.update()
 	})
 
 	new Swiper(".main-banner", {
@@ -105,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			loadPrevNext: true
 		}
 	})
-
+	
 	for (const slider of document.querySelectorAll(".it-was"))
 		new Swiper(slider.querySelector(".was-slider"), {
 			slidesPerView: 3,
@@ -117,6 +147,20 @@ document.addEventListener("DOMContentLoaded", function(){
 			navigation: {
 				prevEl: slider.querySelector(".swiper-button-prev"),
 				nextEl: slider.querySelector(".swiper-button-next"),
+			},
+			pagination: {
+				el: ".it-was__pagination .swiper-pagination",
+				clickable: true,
+			},
+			breakpoints: {
+				1000: {
+					slidesPerView: 2,
+					spaceBetween: 20
+				},
+				660: {
+					slidesPerView: 1,
+					spaceBetween: 20
+				}
 			}
 		})
 

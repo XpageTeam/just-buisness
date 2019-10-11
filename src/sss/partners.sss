@@ -9,6 +9,7 @@
 
         .main-title
             font-size: em(28)
+            cursor: pointer
 
         select
             display: none
@@ -87,3 +88,22 @@
 
                         &-active
                             background: var(--main-color)
+
+    .partners
+
+        &__title
+            justify-content: flex-start
+            
+            .main-title
+                display: none
+
+            select
+                display: block
+                width: 100%
+                margin: 0 0 20px
+                border: none
+                font-weight: 700
+                font-size: 2.50em
+                color: #472017
+                padding-right: 30px
+                background: url("../img/ico-select-arrow.svg") right center no-repeat
