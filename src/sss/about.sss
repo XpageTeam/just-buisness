@@ -1,0 +1,53 @@
+.about
+    padding: 85px 0 100px
+    background: url("../img/about-bg.svg") right center no-repeat
+
+    &__text
+        
+        &-text
+            max-width: 575px
+
+        &-title
+            margin: 0 0 40px
+            font-weight: bold
+            color: #472017
+            line-height: 110%
+            font-size: em(70)
+
+        &-subtitle
+            font-size: em(26)
+            color: #090909
+
+        &-btn
+            margin: 55px 0 0
+
+@media (max-width: 1500px) and (min-width: 1000px)
+    .about
+        padding: 60px 0
+
+@media (max-width: 1000px) and (min-width: 660px)
+    .about
+        background: none
+        padding: 40px 0
+
+        &__text
+
+            &-title
+                margin: 0 0 20px
+
+            &-btn
+                margin: 20px 0 0
+
+
+@media (max-width: 660px)
+    .about
+        background: none
+        padding: 30px 0
+        
+        &__text
+
+            &-title
+                margin: 0 0 20px
+
+            &-btn
+                margin: 20px 0 0

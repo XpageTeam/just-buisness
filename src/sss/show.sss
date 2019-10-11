@@ -1,0 +1,165 @@
+.show-section
+    color: #fff #BA8D61
+    position: relative
+    overflow: hidden
+
+    &:before, &:after
+        content: ""
+        position: absolute 0 * 0 0
+        width: 50%
+        z-index: 2
+
+    &:before
+        background: inherit
+
+    &:after
+        background: url("../img/show-bg.svg") left center no-repeat
+
+.show
+    padding: 190px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &__desc, &__slider
+        width: 50%
+
+    &__desc
+        position: relative
+        z-index: 3
+        padding-right: 30px
+
+    &__slider
+        position: relative
+
+        &-nav
+            position: absolute * -20px calc(100% + 80px) 0
+
+.show-desc
+    max-width: 565px
+
+    &__title
+        margin: 0 0 42px
+
+        .main-title
+            color: inherit
+
+.ss-nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    &__bullets
+
+        .swiper-pagination
+            
+            &-bullet
+                size: 6px
+                opacity: 1
+                transition: background .3s ease
+                
+                &:not(.swiper-pagination-bullet-active)
+                    background-color: #D1B396
+
+                &-active
+                    background-color: #fff
+
+                &:not(:last-child)
+                    margin-right: 18px                    
+
+    &__arrows
+        display: flex
+
+        .swiper-button
+
+            &-prev, &-next
+                background: none !important
+
+                &:after
+                    border-color: #fff  
+
+.show-slider
+
+    &__slide
+        display: block
+        position: relative
+        border-radius: 10px
+        overflow: hidden
+
+        &:after, &:before
+            content: ""
+
+        &:after
+            position: absolute calc(50% - 31px) calc(50% - 31px) * *
+            border-radius: 50px
+            size: 62px
+            background: url("../img/ico-play.svg") center no-repeat
+            background-color: var(--main-color)
+
+        &:before
+            position: absolute 0
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 83.33%, rgba(0, 0, 0, 0.7) 100%)
+
+        img
+            display: block
+            width: 100%
+            border-radius: 10px
+
+        &-text
+            position: absolute * 0 0
+            z-index: 1 
+            color: #fff
+            letter-spacing: 0.02em
+            font-size: em(22)
+            line-height: 120%
+            padding: 20px 30px
+
+@media (max-width: 1500px) and (min-width: 1000px)
+    .show
+        padding: 100px 0
+
+        &__slider
+
+            &-nav
+                bottom: calc(100% + 30px)
+
+@media (max-width: 1000px)
+    .show
+        padding: 40px 0 60px
+        flex-direction: column
+        align-items: stretch
+
+        &-section:before
+            display: none
+
+        &__slider
+
+            &-nav
+                bottom: auto
+                top: calc(100% + 15px)
+
+        &__desc, &__slider
+            width: 100%
+
+        &__desc
+            padding: 0
+
+        &__slider
+            margin: 30px 0 0
+
+    .show-desc
+
+        &__title
+            margin: 0 0 20px
+
+    .ss-nav
+        justify-content: center
+        width: 100%
+
+        &__arrows
+            display: none
+
+        &__bullets
+
+            .swiper-pagination
+                position: static

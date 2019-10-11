@@ -1,0 +1,121 @@
+.peoples
+    padding: 80px 0 90px
+
+    &--bg
+        background: #FAF7F4
+
+    &__title
+        margin: 0 0 70px
+        text-align: center
+    
+    &__list
+        display: flex
+        flex-wrap: wrap
+        margin: 0 0 -40px -40px
+
+        &-item
+            margin: 0 0 40px 40px
+            width: calc((100% - 40px * 4) / 4)
+            display: flex
+            flex-direction: column
+
+.people
+    flex: 1 1 auto
+    display: flex
+    flex-direction: column
+
+    &__img
+        flex: none
+
+        img
+            border-radius: 10px
+            display: block
+
+    &__name
+        color: #472017
+        line-height: 120%
+        flex: 1 1 auto
+        font-size: em(24)
+        margin: 40px 0 0
+        max-width: 255px
+        text-transform: uppercase
+        font-weight: bold
+
+    &__who
+        color: #BA8D61
+        line-height: 139%
+        min-height: 44px
+        margin: 20px 0 0
+        max-width: 250px
+
+    &__btn
+        margin: 45px 0 0
+
+.people-add
+    border: 1px solid #BA8D61
+    font-weight: bold
+    font-size: em(14)
+    letter-spacing: 0.02em
+    white-space: nowrap
+    width: 100%
+    display: block
+    text-align: center
+    text-transform: uppercase
+    color: #BA8D61
+    border-radius: 57px
+    padding: 19px 15px 18px
+
+@media (max-width: 1500px) and (min-width: 1000px)
+    .peoples
+        padding: 60px 0
+        
+        &__title
+            margin: 0 0 30px
+
+@media (max-width: 1000px) and (min-width: 660px)
+    .peoples
+        padding: 40px 0
+
+        &__title
+            margin: 0 0 20px
+
+        &__list
+            margin: 0 0 -30px -20px
+
+            &-item
+                width: calc((100% - 20px * 2) / 2)
+                margin: 0 0 30px 20px
+
+    .people
+
+        &__img
+
+            img
+                width: 100%
+
+        &__name
+            margin: 15px 0 0
+
+@media (max-width: 660px)
+    .peoples
+        padding: 30px 0
+
+        &__title
+            margin: 0 0 20px
+
+        &__list
+            margin: 0 0 -30px -20px
+
+            &-item
+                width: calc((100% - 20px * 1) / 1)
+                margin: 0 0 30px 20px
+
+    .people
+
+        &__img
+
+            img
+                width: 100%
+
+        &__name
+            margin: 15px 0 0

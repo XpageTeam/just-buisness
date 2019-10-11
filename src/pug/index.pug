@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Просто бизнес
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+
+		main.main-content#content
+			section.main-banner
+				.swiper-wrapper
+					.swiper-slide
+						.main-banner__slide
+							figure.main-banner__img
+								img(src="img/photos/main-slider-img.jpg")
+							.main-banner__slide-text
+								.wrapper
+									.banner-text
+										.banner-text__labels
+											.banner-labels
+												.banner-labels__btn Кастинг 
+													b 26 октября 2019
+												.banner-labels__btn.banner-labels__btn--bordered Челябинск
+										.banner-text__title 4 сезон
+											br
+											| реалити-шоу «Просто бизнес»
+					.swiper-slide
+						.main-banner__slide
+							figure.main-banner__img
+								img.swiper-lazy(data-src="img/photos/main-slider-img.jpg")
+								.swiper-lazy-preloader
+							.main-banner__slide-text
+								.wrapper
+									.banner-text
+										.banner-text__labels
+											.banner-labels
+												.banner-labels__btn Кастинг 
+													b 26 октября 2019
+												.banner-labels__btn.banner-labels__btn--bordered Челябинск
+										.banner-text__title 4 сезон
+											br
+											| реалити-шоу «Просто бизнес»
+					.swiper-slide
+						.main-banner__slide
+							figure.main-banner__img
+								img.swiper-lazy(data-src="img/photos/main-slider-img.jpg")
+								.swiper-lazy-preloader
+							.main-banner__slide-text
+								.wrapper
+									.banner-text
+										.banner-text__labels
+											.banner-labels
+												.banner-labels__btn Кастинг 
+													b 26 октября 2019
+												.banner-labels__btn.banner-labels__btn--bordered Челябинск
+										.banner-text__title 4 сезон
+											br
+											| реалити-шоу «Просто бизнес»
+				.main-banner__form#request
+					.wrapper
+						.mb-form
+							.mb-form__title Заполни анкету и стань участником
+								br
+								| 4 сезона реалити-шоу
+							form(action="#")
+								.mb-form__inputs
+									.form__inputs
+										.form__inputs-input
+											.default-input
+												input.default-input__input(type="text" placeholder="ФИО")
+										.form__inputs-input
+											.default-input
+												select.default-input__input.default-input__input--select
+													option(value="0") Выберите город
+													option(value="1") Челябинск
+													option(value="2") Челябинск
+													option(value="3") Челябинск
+													option(value="4") Челябинск
+										.form__inputs-input
+											.default-input
+												input.default-input__input(type="tel" placeholder="Ваш телефон")
+										.form__inputs-input
+											.default-input
+												input.default-input__input(type="email" placeholder="Ваш e-mail")
+										.form__inputs-input
+											.default-input
+												input.default-input__input(type="text" placeholder="Опишите вашу бизнес-идею...")
+								.form__submit
+									input.default-btn(type="submit" value="Стать участником")
+				.main-banner__nav
+					.wrapper
+						.swiper-pagination
+				.main-banner__scroll
+			section.counters
+				.wrapper
+					.counters__list
+						.counters__list-item
+							.counter
+								.counter__number 12 
+								.counter__text героев 
+									br
+									| реалити-шоу
+						.counters__list-item
+							.counter
+								.counter__number 8 
+								.counter__text недель 
+									br
+									| бизнес-хаков
+						.counters__list-item
+							.counter
+								.counter__number 4 
+								.counter__text топовых 
+									br
+									| наставника
+			section.about#about
+				.wrapper
+					.about__text
+						.about__text-subtitle Всего 1 шанс доказать всем,  что
+						.about__text-title «Бизнес — это просто»
+						.about__text-text
+							p 
+								b «Просто бизнес» — 
+								| это проект о том, как 12 молодых людей под наставничеством успешных предпринимателей региона на глазах у тысяч телезрителей пройдут весь путь от Идеи до Бизнеса. 
+							p Еженедельно, по решению Экспертов, шоу будет покидать один из участников проекта. В финале Победитель получит инвестиции на развитие созданного бизнеса. 
+						.about__text-btn
+							a.default-btn.scrollto(href="#request") Стать участником
+			section.peoples.peoples--bg#mentors
+				.wrapper
+					.peoples__title
+						.main-title Наставники
+					.peoples__list
+						each people, i in [{name: "Анна Горобец", whois: "Лицо и владелица бренда «Goddes», создатель авторской SPA-косметики AB"}, {name: "Артём Власенко", whois: "Основатель сети салонов «Оптик-центр» и офтальмологической клиники."}]
+							.peoples__list-item
+								.people
+									a.people__img(href="#")
+										img(loading="lazy" src="img/photos/people-img-"+i+".jpg")
+									.people__name=people.name
+									a.people__who(href="#")=people.whois
+						.peoples__list-item
+							.people
+								.people__img
+									img(loading="lazy" src="img/person-default-img.jpg")
+								.people__btn
+									a.people-add.fancybox(href="#person") Прeдложить наставника
+						.peoples__list-item
+							.people
+								.people__img
+									img(loading="lazy" src="img/person-default-img.jpg")
+								.people__btn
+									a.people-add.fancybox(href="#person") Прeдложить наставника
+			section.opportunities#apport
+				.wrapper
+					.opportunities__title
+						.main-title Возможности
+					.opportunities__list
+						each app, i in ["Инвестиции в ваш бизнес", "Онлайн-курс «120 секунд от Деловой Среды».", "Менторство от лучших предпринимателей региона", "PR-сопровождение вашего бизнеса", "Стажировка в лучших компаниях страны", "Образовательная программа «Азбука предпринимателя» от Территории Бизнеса", ]
+							.opportunities__list-item
+								.apportunity
+									figure.apportunity__img
+										img(src="img/apport-img-"+i+".svg")
+									figcaption.apportunity__text=app
+			//section.peoples#experts
+				.wrapper
+					.peoples__title
+						.main-title Эксперты
+					.peoples__list
+						- for (let j = 0; j < 2; j++)
+							each people, i in [{name: "Анна Горобец", whois: "Руководитель студии шугаринга «GODDEST»"}, {name: "Настя и Азамат Эртухановы", whois: "Основатели сети магазинов  «STYLISH»"}]
+								.peoples__list-item
+									.people
+										a.people__img(href="#")
+											img(src="img/photos/people-img-"+i+".jpg")
+										.people__name=people.name
+										a.people__who(href="#")=people.whois
+			section.show-section#show
+				.wrapper
+					.show
+						.show__desc
+							.show-desc
+								.show-desc__title
+									.main-title Выпуски 3 сезона
+								.show-desc__text
+									p Кастинг на участие в реалити-шоу «Просто Бизнес» прошел в 2-х самых крупных городах региона: Челябинске и Магнитогорске. Больше 500 заявок на участие из самых разных уголков страны. Перед наставниками стояла задача выслушать каждого и найти среди них настоящих предпринимателей.
+									p Итак, кто эти 12 героев? Чьи проекты продолжат битву за инвестиции? Смотрите в новом выпуске реалити-шоу «Просто бизнес».
+						.show__slider
+							.show__slider-nav
+								.ss-nav
+									.ss-nav__bullets
+										.swiper-pagination
+									.ss-nav__arrows
+										.swiper-button-prev
+										.swiper-button-next
+							.show__slider-slider
+								.show-slider
+									.swiper-wrapper
+										- for (let i = 0; i < 10; i++)
+											.swiper-slide
+												a.show-slider__slide.fancybox(href="#")
+													if (i > 0)
+														img.swiper-lazy(data-src="img/photos/show-slider-img.jpg")
+														.swiper-lazy-preloader
+													else
+														img(src="img/photos/show-slider-img.jpg")
+													.show-slider__slide-text Реалити-шоу «Просто Бизнес»— Кастинг (1 выпуск)
+			section.it-was#was
+				.wrapper
+					.it-was__title
+						.it-was__title-text Как это было
+						.it-was__title-arrow
+							.swiper-button-prev
+							.swiper-button-next
+				.it-was__slider
+					.was-slider
+						.swiper-wrapper
+							- for (let j = 0; j < 3; j++)
+								- for (let i = 0; i < 3; i++)
+									.swiper-slide
+										a.was-slider__slide.fancybox(href="img/photos/was-img-"+i+".jpg")
+											if (i == 0 && j == 0)
+												img(src="img/photos/was-img-"+i+".jpg")
+											else
+												img.swiper-lazy(data-src="img/photos/was-img-"+i+".jpg")
+												.swiper-lazy-preloader
+				.it-was__pagination
+					.swiper-pagination
+			section.partners-section#partners
+				.wrapper
+					.partners
+						.partners__title
+							.main-title(data-target="0") Организаторы
+							.main-title(data-target="1") Производство проекта
+							.main-title(data-target="2") Информационные партнёры
+							select
+								option(value="0") Организаторы
+								option(value="1") Производство проекта
+								option(value="2") Информационные партнёры
+						.partners__list
+							.partners-list
+								.swiper-wrapper
+									- for (let i = 0; i < 9; i++)
+										if (i < 3)
+											.swiper-slide(data-id="0")
+												a.partner(href="#")
+													img(src="img/photos/new-partners-"+i+".jpg")
+										else if (i > 2 && i < 6)
+											.swiper-slide(data-id="1")
+												a.partner(href="#")
+													img(src="img/photos/new-partners-"+i+".jpg")
+										else
+											.swiper-slide(data-id="2")
+												a.partner(href="#")
+													img(src="img/photos/new-partners-"+i+".jpg")
+								.partners-list__nav
+									.swiper-pagination
+			section.contacts-section#contacts
+				.wrapper
+					.contacts
+						.contacts__title
+							.main-title Контакты
+						.contacts__contacts
+							address
+								a(href="tel: +7 (925) 700 37 78") +7 (925) 700 37 78
+								a(href="mailto: probiztv@mail.ru") probiztv@mail.ru
+						.contacts__soc
+							.f-soc
+								each soc in ["vk", "inst", "fb", "yt", "tel", ]
+									a.f-soc__link(href="#")
+										img(src="img/photos/soc-"+soc+".svg")
+		include inc/footer.pug
+		.mb-form#person
+			.mb-form__title Предложить наставника
+			form(action="#")
+				.mb-form__inputs
+					.form__inputs
+						.form__inputs-input
+							.default-input
+								input.default-input__input(type="text" placeholder="ФИО")
+						.form__inputs-input
+							.default-input
+								input.default-input__input(type="text" placeholder="Название компании")
+				.form__submit
+					input.default-btn(type="submit" value="Предложить")
+		include inc/scripts.pug

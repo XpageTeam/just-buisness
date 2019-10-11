@@ -1,0 +1,52 @@
+.contacts-section
+    color: #fff #472017
+    border-bottom: 1px solid #532A21
+
+.contacts
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 70px 0 65px
+
+    &__title
+
+        .main-title
+            color: inherit
+
+    &__contacts
+
+        address
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            line-height: 150%
+
+        a
+            color: inherit
+            border: none !important
+
+            &[href^="tel"], &[href^="mail"]
+                padding-left: 32px
+
+            &[href^="tel"]
+                background: url("../img/ico-tel.svg") left center no-repeat
+
+            &[href^="mail"]
+                background: url("../img/ico-mail.svg") left center no-repeat
+
+
+@media (max-width: 1500px) and (min-width: 660px)
+    .contacts
+        padding: 60px 0
+
+@media (max-width: 660px)
+    .contacts
+        padding: 30px 0
+        flex-direction: column
+        align-items: stretch
+
+        &__title
+            margin: 0 0 20px
+
+        &__contacts
+            margin: 0 0 20px

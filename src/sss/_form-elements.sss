@@ -1,0 +1,329 @@
+.form
+
+	&__submit
+		display: flex
+		align-items: center
+		margin: 42px 0 0
+		justify-content: center
+
+		&--reverse
+			flex-direction: row-reverse
+			justify-content: space-between
+
+		&:not(&--reverse) &-btn
+			margin-right: 30px
+
+		&--reverse &-btn
+			margin-left: 30px
+
+		&-btn
+			flex: none
+
+		&-text
+			font-size: em(14)
+			color: #C6C6C6
+
+	&__inputs
+		display: flex
+		flex-wrap: wrap
+
+		&:not(&--2, &--3, &--4)
+
+			.form
+
+				&__inputs
+
+					&-input
+						width: 100%
+
+		&--2, &--3, &--4
+			margin: 0 0 calc(-1 * var(--input-vert-spacing)) calc(-1 * var(--input-hor-spacing))
+
+			.form__inputs-input
+				margin: 0 0 var(--input-vert-spacing) var(--input-hor-spacing)
+
+		&--2
+
+			.form__inputs-input
+
+				&:not(.form__inputs-input--2)
+					width: calc((100% - var(--input-hor-spacing) * 2) / 2)
+
+				&--2
+					width: calc((100% - var(--input-hor-spacing) * 1) / 1)
+
+
+		&--3
+
+			.form__inputs-input
+
+				&:not(.form__inputs-input--2)
+					width: calc((100% - var(--input-hor-spacing) * 3) / 3)
+
+		&--4
+
+			.form__inputs-input
+
+				&:not(.form__inputs-input--2)
+					width: calc((100% - var(--input-hor-spacing) * 4) / 4)
+
+				&--2
+					width: calc((100% - var(--input-hor-spacing) * 2) / 2)
+
+.form__inputs-input
+	display: flex
+	flex-direction: column
+
+	&--2
+
+		&:first-child
+
+			input.default-input__input
+				background-image: url("../img/ico-perse.svg")
+				background-position: right 27px center
+				background-repeat: no-repeat
+
+textarea.default-input__input
+
+	&:not(.default-input__input--textarea)
+		max-height: 57px
+		resize: none
+
+		~ .default-input__label
+			position: static
+			margin: 0 0 15px
+			font-size: em(10)
+			opacity: 1
+
+.default-input
+	display: flex
+	flex-direction: column-reverse
+	position: relative
+	justify-content: space-between
+	flex: 1 1 auto
+
+	&__error
+		transition: opacity .3s ease
+		user-select: none
+		font-size: 12px
+		position: absolute calc(100% + 6px) 0 * *
+		opacity: 0
+		pointer-events: none
+
+	&__input
+		border-radius: 10px
+		font-size: 1em
+		border: none
+		color: #000 #FAF7F4
+		width: 100%
+		padding: var(--input-padding)
+		transition: border-color .3s ease
+
+		&:not(.default-input__input--textarea)
+			max-height: 50px
+
+		&--error:not(:valid), &.error:not(:valid), &.forms__input_error:not(:valid)
+			border-left-color: #E74E40
+			border-left-width: 4px
+
+			~ .default-input__error
+				opacity: 1
+
+			&:focus
+
+				~ .default-input__error
+					opacity: 0
+
+		&::-webkit-input-placeholder
+			transition: opacity .3s ease
+			color: rgba(#000, .5)
+
+		&:-moz-placeholder
+			transition: opacity .3s ease
+			color: rgba(#000, .5)
+
+		&::-moz-placeholder
+			transition: opacity .3s ease
+			color: rgba(#000, .5)
+
+		&:-ms-input-placeholder
+			transition: opacity .3s ease
+			color: rgba(#000, .5)
+
+		&:not(:focus)
+
+			&::-webkit-input-placeholder
+				color: #C8C8C8
+
+			&:-moz-placeholder
+				color: #C8C8C8
+
+			&::-moz-placeholder
+				color: #C8C8C8
+
+			&:-ms-input-placeholder
+				color: #C8C8C8
+
+		&:focus
+			border-color: var(--main-color)
+
+			&::-webkit-input-placeholder
+				opacity: 0 !important
+
+			&:-moz-placeholder
+				opacity: 0 !important
+
+			&::-moz-placeholder
+				opacity: 0 !important
+
+			&:-ms-input-placeholder
+				opacity: 0 !important
+
+
+		&--select
+			padding: var(--select-padding)
+			background-image: url("../img/ico-select-arrow.svg")
+			background-repeat: no-repeat
+			background-position: right 19px center
+			position: relative
+			cursor: pointer
+
+			option
+				color: #000
+
+			&:focus, &.js__opened
+				z-index: 2
+
+			&.js__opened
+
+				~ .my-select
+
+					&__list
+
+						&-cont
+							display: block
+
+		&--file
+			position: absolute 0 * * 0
+			opacity: 0
+			size: 1px 
+			overflow: hidden
+			pointer-events: none
+
+			~ .default-input__label
+				position: static
+				margin: 0 0 15px
+				font-size: em(10) !important
+				opacity: 1 !important
+
+		&-filetext
+			position: relative
+
+			.default-input__input
+				border: 2px solid var(--main-color)
+				padding: var(--input-focus-padding)
+
+		&:focus, &.js__opened
+			border-color: var(--main-color)
+
+			~ .default-input
+
+				&__label
+					font-size: 0
+					opacity: 0
+
+		&[readonly]
+			cursor: default
+
+		&--textarea
+			min-width: 100%
+			max-width: 100%
+			max-height: 40vh
+			min-height: 124px
+
+	&__label
+		font-weight: bold
+		font-size: em(10)
+		color: rgba(46, 56, 68, .6)
+		text-transform: uppercase
+		position: absolute 12px * * 16px
+		pointer-events: none
+		transition: opacity .3s ease, font-size .3s ease
+
+		&-file
+			size: 49px
+			position: absolute calc(50% - 25px) 4px * *
+			background: url("../img/ico-file.svg") center no-repeat, var(--main-color)
+			border-radius: 5px
+			cursor: pointer
+			transition: background-color .3s ease
+
+			&:hover
+				background-color: var(--main-color-darken)
+
+@supports (display: grid)
+	.form__inputs
+		margin: 0 !important
+		display: grid
+		grid-gap: var(--input-vert-spacing) var(--input-hor-spacing)
+
+		&--2
+			grid-template-columns: repeat(2, 1fr)
+
+		&--3
+			grid-template-columns: repeat(3, 1fr)
+
+		&--4
+			grid-template-columns: repeat(4, 1fr)
+
+		&-input
+			width: auto !important
+			margin: 0 !important
+
+			&--2
+				grid-column: span 2
+
+			&--3
+				grid-column: span 3
+
+			&--4
+				grid-column: span 4
+
+.popup
+	display: none
+	width: 821px
+	max-width: 100%
+
+	--input-hor-spacing: 26px
+	--input-vert-spacing: 26px
+
+	.mc-form
+
+		&__title
+			font-size: em(24)
+			font-weight: 300
+			margin: 0 0 25px
+
+		&__submit
+			margin: 30px 0 0
+
+.error-text
+	color: #F44336
+
+
+@media (max-width: 660px)
+	.form__submit
+
+		&-text
+
+			br
+				display: none
+
+	.form	
+
+		&__inputs
+			grid-template-columns: 1fr
+			--input-vert-spacing: 20px
+
+			&-input
+				grid-column: 1

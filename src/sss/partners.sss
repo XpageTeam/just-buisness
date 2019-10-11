@@ -1,0 +1,89 @@
+.partners
+    padding: 90px 0 115px
+    overflow: hidden
+
+    &__title
+        display: flex
+        justify-content: space-around
+        margin: 0 0 50px
+
+        .main-title
+            font-size: em(28)
+
+        select
+            display: none
+
+    &__list
+        margin: 0 auto
+        max-width: 865px
+
+.partners-list
+
+    .swiper
+
+        &-slide
+            display: flex
+            flex-direction: column
+            height: auto
+
+.partner
+    display: flex
+    flex: 1 1 auto
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+@media (min-width: 1000px)
+    .partners-list
+
+        .swiper
+
+            &-wrapper
+                flex-wrap: wrap
+                margin: 0 0 -59px -40px
+                transform: none !important
+                width: auto !important
+
+            &-slide
+                width: calc((100% - 40px * 3) / 3) !important
+                margin: 0 0 59px 40px !important
+
+                &-duplicate
+                    display: none !important
+
+        &__nav
+            display: none
+
+@media (max-width: 1500px) and (min-width: 1000px)
+    .partners
+        padding: 60px 0
+
+        &__title
+            margin: 0 0 30px
+
+@media (max-width: 1000px)
+    .partners
+        padding: 40px 0
+
+        &__title
+            margin: 0 0 20px
+
+    .partners-list
+
+        &__nav
+            display: flex
+            justify-content: center
+            margin: 20px 0 0
+
+            .swiper
+
+                &-pagination
+                    position: static
+
+                    &-bullet
+
+                        &:not(:last-child)
+                            margin-right: 10px
+
+                        &-active
+                            background: var(--main-color)

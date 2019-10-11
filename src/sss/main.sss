@@ -1,0 +1,37 @@
+@import "../css/common.css"
+@import "swiper/dist/css/swiper.css"
+
+@import "_vars.sss"
+@import "_base.sss"
+@import "_text-styles.sss"
+@import "_form-elements.sss"
+// @import "base-form.sss"
+
+@import "_header.sss"
+
+@import "main-banner.sss"
+@import "counters.sss"
+@import "about.sss"
+@import "peoples.sss"
+@import "opportunities.sss"
+@import "show.sss"
+@import "partners.sss"
+@import "was.sss"
+@import "contacts.sss"
+@import "_footer.sss"
+
+.main-title
+	font-weight: bold
+	font-size: em(60)
+	color: #472017
+
+@media (max-width: 1000px) and (min-width: 660px)
+	.main-title
+		font-size: em(45)
+
+@media (max-width: 660px)
+	.main-title
+		font-size: em(35)
+
+.mb-form#person
+	display: none

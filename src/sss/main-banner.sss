@@ -1,0 +1,247 @@
+// .main-banner
+//     position: relative
+
+//     &__img, &__img img
+//         display: block
+//         width: 100%
+
+//     &__img
+
+//         img
+//             max-height: calc(100vh - 167px)
+//             object-fit: cover
+//             object-position: center
+
+//     &__text
+//         position: absolute 0
+//         color: #fff rgba(34, 34, 34, 0.7)
+//         display: flex
+//         flex-direction: column
+//         justify-content: center
+
+//         .wrapper
+//             width: 100%
+//             box-sizing: border-box
+
+// .mb-counter
+//     font-weight: bold
+//     font-size: em(40)
+//     line-height: 1
+
+//     span
+//         color: var(--main-color)
+//         font-size: em(76, 40)
+
+// .mb-text
+//     display: flex
+//     align-items: center
+//     justify-content: space-between
+
+//     &__counters
+
+//         &-item
+
+//             &:not(:first-child)
+//                 margin: 12px 0 0
+
+//     &__text
+//         margin-left: 20px
+//         font-size: em(40)
+//         line-height: 120%
+
+//         b
+//             color: var(--main-color)
+//             font-size: em(76, 40)
+
+//         > b
+//             display: block
+
+//             &:last-child
+//                 margin: 22px 0 0
+
+
+// @media (max-width: 1400px)
+//     .main-banner
+//         font-size: 15px
+
+//         &__img
+
+//             img
+//                 max-height: calc(100vh - 129px)
+    
+
+// @media (max-width: 1300px)
+//     .main-banner
+//         font-size: 14px
+
+// @media (max-width: 1000px) and (min-width: 660px)
+//     .mb-text
+//         flex-direction: column
+
+//         &__counters
+//             display: flex
+//             width: 100%
+//             justify-content: space-between
+
+//             &-item
+
+//                 &:not(:first-child)
+//                     margin: 0 0 0 20px
+
+//         &__text
+//             margin: 40px 0 0
+//             text-align: center
+
+
+// @media (max-width: 660px)
+//     .mb-text
+//         flex-direction: column
+//         align-items: flex-start
+//         font-size: 11px
+
+//         &__text
+//             margin: 30px 0 0
+//             line-height: 150%
+
+//     .main-banner
+
+//         &__img
+
+//             img
+//                 height: calc(100vh - 200px)
+
+// @media (max-width: 360px)
+//     .mb-text
+//         font-size: 8px
+
+.main-banner
+    width: 100%
+    overflow: hidden
+    position: relative
+
+    &__scroll
+        cursor: pointer
+        border-radius: 50%
+        size: 150px
+        background: url("../img/ico-goto-arrow.svg") center bottom 52px no-repeat, #FAF7F4
+        position: absolute calc(100% - 53px) calc(50% - 75px) * *
+        z-index: 3
+
+    &__nav
+        position: absolute * 0 0
+        padding: 0 0 10%
+        z-index: 2
+
+        .swiper-pagination
+
+            &-bullet
+                background-color: #ffffff
+                opacity: 1
+                transition: background-color .3s ease
+                size: 8px
+                position: relative
+
+                &:after
+                    content: ""
+                    position: absolute 50% * * 50%
+                    transform: translate(-50%, -50%)
+                    size: 11px
+                    border: 2px solid #fff
+                    border-radius: 50%
+                    transition: opacity .3s ease
+                    opacity: 0
+
+                &-active
+                    background-color: transparent     
+
+                    &:after
+                        opacity: 1
+
+                &:not(:last-child)
+                    margin-right: 18px
+
+    &__form
+        position: absolute 0
+        pointer-events: none
+        display: flex
+        flex-direction: column
+        justify-content: center
+        z-index: 2
+
+        .wrapper
+            width: 100%
+            text-align: right
+
+    &__img
+
+        img
+            display: block
+            width: 100%
+            max-height: calc(100vh - 167px)
+            object-fit: cover
+            object-position: center
+
+    &__slide
+        position: relative
+
+        &:after
+            content: ""
+            position: absolute 0
+            background: rgba(0,0,0, .6)
+
+        &-text
+            position: absolute 0
+            display: flex
+            flex-direction: column
+            justify-content: center
+            color: #fff
+            z-index: 1
+
+            .wrapper
+                width: 100%
+
+.banner-text
+    max-width: 750px
+
+    &__title
+        text-transform: uppercase
+        font-size: em(65)
+        line-height: 120%
+        font-weight: bold
+
+        &:not(:first-child)
+            margin: 40px 0 0
+
+.banner-labels
+    display: flex
+
+    &__btn
+        text-transform: uppercase
+        letter-spacing: 0.02em
+        border-radius: 5px
+        font-size: 1em
+        border: 1px solid var(--main-color)
+        padding: 15px 17px 13px
+        user-select: none
+
+        &:not(&--bordered)
+            background: var(--main-color)
+
+        &:not(:last-child)
+            margin-right: 22px
+
+.mb-form
+    background: #ffffff
+    padding: 35px 45px 45px
+    width: 510px
+    pointer-events: all
+    display: inline-block
+    text-align: left
+    border-radius: 10px
+
+    &__title
+        text-align: center
+        font-weight: bold
+        font-size: em(22)
+        line-height: 120%
+        margin: 0 0 35px
