@@ -4,12 +4,26 @@
 
     &__title
         display: flex
-        justify-content: space-around
-        margin: 0 0 50px
+        justify-content: space-between
+        margin: 0 auto 50px
+        max-width: 865px
 
         .main-title
             font-size: em(28)
             cursor: pointer
+            width: 250px
+            text-align: center
+
+            border: 1px solid var(--main-color)
+            padding: 15px 17px 13px
+            user-select: none
+            border-radius: 5px
+            letter-spacing: 0.02em
+            font-size: 1em
+            transition: color .3s ease, background .3s ease
+
+            &.active
+                color: #fff var(--main-color)
 
         select
             display: none
@@ -60,14 +74,14 @@
         padding: 60px 0
 
         &__title
-            margin: 0 0 30px
+            margin: 0 auto 30px
 
 @media (max-width: 1000px)
     .partners
         padding: 40px 0
 
         &__title
-            margin: 0 0 20px
+            margin: 0 auto 20px
 
     .partners-list
 

@@ -98,6 +98,9 @@ document.addEventListener("DOMContentLoaded", function(){
 		const slidesForDisable = partnersSlider.el
 			.querySelectorAll(`.swiper-slide:not([data-id="${id}"])`);
 
+		$(".partners__title .main-title.active").removeClass("active")
+		$(this).addClass("active")
+
 		for (const slide of slidesForDisable)
 			slide.style.display = "none"
 
