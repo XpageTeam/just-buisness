@@ -60,7 +60,9 @@ gulp.task("postcss", _ =>
 				functions: require("./config/postcss/functions.js")
 			}),
 			require("postcss-short"),
-			require("postcss-preset-env"),
+			require("postcss-preset-env")({
+				stage: 0
+			}),
 			require("postcss-assets"),
 			require("autoprefixer"),
 			require("postcss-flexbugs-fixes"),

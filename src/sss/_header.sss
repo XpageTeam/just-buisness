@@ -10,10 +10,15 @@
         align-items: center
         padding: 45px 0 63px
 
+    &__logo, &__menu
+        margin-right: 32px
+
 .logo
+    display: flex
+    justify-content: space-between
 
     img
-        display: block
+        width: 46%
 
 .menu
     display: flex
@@ -21,28 +26,40 @@
     li
 
         &:not(:last-child)
-            margin-right: 48px 
+            margin-right: 34px 
 
     &__link
-        font-size: em(20)
+        font-size: 1em
         font-weight: bold
         transition: color .3s ease
         color: #472017
+        white-space: nowrap
+        display: block
 
         &:hover, &:focus, &.active
             color: #BA8D61
 
-@media (max-width: 1400px) and (min-width: 1000px)
+@media (max-width: 1400px) and (min-width: 1300px)
     .head
 
         &__wrap
             padding: 35px 0
 
 @media (max-width: 1300px) and (min-width: 1000px)
+    .logo
+        flex-direction: column
+        width: 150px
+
+        img
+            width: auto
+
+            &:not(:first-child)
+                margin: 15px 0 0
+
     .head
 
-        &__logo
-            max-width: 150px
+        &__wrap
+            padding-block: 25px
 
     .menu
 
@@ -72,6 +89,12 @@
             order: 1
             margin: 20px 0 0
 
+        &__menu, &__logo
+            margin-right: 0 !important
+
+        &__logo
+            width: 45%
+
     .menu
         overflow-x: auto
         overflow-y: hidden
@@ -89,7 +112,14 @@
             padding: 20px 0
 
         &__logo
-            max-width: 35%
+            width: 55%
 
         .default-btn
-            padding: 15px 25px
+            padding: 11px 15px 10px
+            font-size: 11px
+
+@media (max-width: 360px)
+    .head
+
+        &__logo
+            width: 43%
