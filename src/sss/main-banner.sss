@@ -304,3 +304,37 @@
     .mb-form
         width: 100%
         padding: 0 0 20px
+
+@media (max-width: 660px)
+    .main-banner
+
+        .swiper
+
+            &-slide
+
+                &:not(:first-child)
+                    display: none
+
+            &-wrapper
+                display: block
+
+        &__img
+            display: none
+
+        &__slide
+            background: url("../img/slider-mobile-img.jpg") top center no-repeat
+            background-size: cover
+            min-height: 420px
+
+            &-text
+                position: relative
+
+    .banner-text
+        padding: 30px 0
+        font-size: 10px
+
+        &__title
+            font-size: 2.5em
+
+    .mb-form
+        padding-top: 30px

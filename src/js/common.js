@@ -154,6 +154,8 @@ document.addEventListener("DOMContentLoaded", function(){
 			pagination: {
 				el: ".it-was__pagination .swiper-pagination",
 				clickable: true,
+				dynamicBullets: true,
+				dynamicMainBullets: 4
 			},
 			breakpoints: {
 				1000: {
