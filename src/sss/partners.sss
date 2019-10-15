@@ -1,6 +1,54 @@
 .partners
     padding: 90px 0 115px
     overflow: hidden
+    display: flex
+    justify-content: space-around
+    max-width: 865px
+    margin-left: auto
+    margin-right: auto
+
+    &__orgs
+        width: 30%
+
+    &__info
+        width: 60%
+
+    &__orgs, &__info
+
+        &-title
+            margin: 0 0 30px
+            text-align: center
+
+    .p-orgs
+
+        &__item
+
+            &:not(:first-child)
+                margin: 20px 0
+
+    .p-info
+        display: flex
+        flex-wrap: wrap
+        margin: 0 0 -30px -40px
+
+        &__item
+            width: calc((100% - 40px * 2) / 2)
+            margin: 0 0 30px 40px
+
+    .main-title
+        font-size: em(28)
+        // cursor: pointer
+        width: 250px
+        display: inline-block
+        text-align: center
+
+        border: 1px solid var(--main-color)
+        padding: 15px 17px 13px
+        user-select: none
+        border-radius: 5px
+        letter-spacing: 0.02em
+        font-size: 1em
+        transition: color .3s ease, background .3s ease
 
     &__title
         display: flex
@@ -121,3 +169,13 @@
                 color: #472017
                 padding-right: 30px
                 background: url("../img/ico-select-arrow.svg") right center no-repeat
+
+@media (max-width: 660px)
+    .partners
+        display: block
+
+        &__info
+            margin: 50px 0
+
+        &__info, &__orgs
+            width: 100%

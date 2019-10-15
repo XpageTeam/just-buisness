@@ -228,7 +228,42 @@ html(lang="ru")
 			section.partners-section#partners
 				.wrapper
 					.partners
-						.partners__title
+						.partners__orgs
+							.partners__orgs-title 
+								.main-title Организаторы
+							.p-orgs
+								.p-orgs__item
+									a.partner(href="#")
+										img(src="img/photos/new-partners-"+0+".jpg")
+								.p-orgs__item
+									a.partner(href="#")
+										img(src="img/photos/new-partners-"+3+".jpg")
+								.p-orgs__item
+									a.partner(href="#")
+										img(src="img/photos/new-partners-"+6+".jpg")
+						.partners__info
+							.partners__info-title 
+								.main-title Информационные партнёры
+							.p-info
+								.p-info__item
+									a.partner(href="#")
+										img(src="img/photos/new-partners-"+1+".jpg")
+								.p-info__item
+									a.partner(href="#")
+										img(src="img/photos/new-partners-"+2+".jpg")
+								.p-info__item
+									a.partner(href="#")
+										img(src="img/photos/new-partners-"+4+".jpg")
+								.p-info__item
+									a.partner(href="#")
+										img(src="img/photos/new-partners-"+5+".jpg")
+								.p-info__item
+									a.partner(href="#")
+										img(src="img/photos/new-partners-"+7+".jpg")
+								.p-info__item
+									a.partner(href="#")
+										img(src="img/photos/new-partners-"+7+".jpg")
+						//- .partners__title
 							.main-title(data-target="0") Организаторы
 							.main-title(data-target="1") Производство проекта
 							.main-title(data-target="2") Информационные партнёры
@@ -236,7 +271,7 @@ html(lang="ru")
 								option(value="0") Организаторы
 								option(value="1") Производство проекта
 								option(value="2") Информационные партнёры
-						.partners__list
+						//- .partners__list
 							.partners-list
 								.swiper-wrapper
 									- for (let i = 0; i < 9; i++)

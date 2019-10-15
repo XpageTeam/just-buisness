@@ -1,7 +1,7 @@
 import $ from "jquery"
-import {Swiper, Pagination, Navigation, Lazy, Keyboard, EffectFade} from "swiper/dist/js/swiper.esm.js"
+import {Swiper, Pagination, Navigation, Autoplay, Lazy, Keyboard, EffectFade} from "swiper/dist/js/swiper.esm.js"
 
-Swiper.use([Pagination, Navigation, Lazy, Keyboard, EffectFade])
+Swiper.use([Pagination, Navigation, Autoplay, Lazy, Keyboard, EffectFade])
 
 window.$ = $;
 window.jQuery = $;
@@ -43,6 +43,10 @@ document.addEventListener("DOMContentLoaded", function(){
 			slidesPerView: 1,
 			loop: true,
 			spaceBetween: 97,
+			autoplay: {
+				disableOnInteraction: false,
+				delay: 3000,
+			},
 			lazy: {
 				loadPrevNext: 3,
 				loadOnTransitionStart: true
@@ -76,6 +80,10 @@ document.addEventListener("DOMContentLoaded", function(){
 		slidesPerView: 4,
 		spaceBetween: 30,
 		dynamicBullets: true,
+		autoplay: {
+			disableOnInteraction: false,
+			delay: 3000,
+		},
 		keyboard: {
 			enabled: true,
 			onlyInViewport: true
@@ -130,8 +138,12 @@ document.addEventListener("DOMContentLoaded", function(){
 	new Swiper(".main-banner", {
 		effect: "fade",
 		pagination: {
+			disableOnInteraction: false,
 			el: ".main-banner .swiper-pagination",
 			clickable: true,
+		},
+		autoplay: {
+			delay: 3000,
 		},
 		lazy: {
 			loadOnTransitionStart: true,
@@ -143,6 +155,10 @@ document.addEventListener("DOMContentLoaded", function(){
 		new Swiper(slider.querySelector(".was-slider"), {
 			slidesPerView: 3,
 			spaceBetween: 60,
+			autoplay: {
+				disableOnInteraction: false,
+				delay: 3000,
+			},
 			lazy: {
 				loadPrevNext: true,
 				loadOnTransitionStart: true,
