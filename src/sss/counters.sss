@@ -19,7 +19,7 @@
 
 @media (min-width: 1500px)
     .counters
-        padding: 175px 0 165px
+        padding: 300px 0 165px
 
 @media (min-width: 1000px)
     .counters
@@ -30,7 +30,19 @@
 
 @media (max-width: 1500px) and (min-width: 1000px)
     .counters
-        padding: 100px 0 80px
+        padding: 250px 0 80px
+
+@media (max-width: 1400px)
+    .counters
+
+        &__list
+
+            &-item
+
+                &:last-child 
+
+                    .counter__text
+                        white-space: normal
 
 @media (max-width: 1000px) and (min-width: 660px)
     .counters
