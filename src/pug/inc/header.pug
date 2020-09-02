@@ -3,15 +3,17 @@ header.head
         .head__wrap
             .head__logo
                 figure.logo
-                    img(src="img/pb_logo.svg")
-                    img(src="img/logo.png")
+                    img(src="img/pb-logo.svg")
+                    img(src="img/business_place.svg")
+                    img(src="img/gosprog_business.svg")
+                    img(src="img/my_business.svg")
             nav.head__menu
                 ul.menu
                     each link in [{title: "О проекте", id: "about"}, {title: "Наставники", id: "mentors"}, {title: "Возможности", id: "apport"}, {title: "3 сезон", id: "show"}, {title: "Партнеры", id: "partners"}, {title: "Контакты", id: "contacts"}, ]
                         li
                             a.menu__link.scrollto(href="#"+link.id)=link.title
-            .head__btn
-                a.default-btn.scrollTo(href="#request") Стать участником
+            //- .head__btn
+            //-     a.default-btn.scrollTo(href="#request") Стать участником
             .head__burger
                 .burger
                     span
