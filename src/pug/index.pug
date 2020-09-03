@@ -128,32 +128,48 @@ html(lang="ru")
 							a.default-btn.scrollto(href="#request") Стать участником
 			section.for#for
 				.wrapper
-					.for__title Для кого этот проект?
-					.for__subtitle Для предпринимателей, которые:
-					.for__list
-						each item in ["хотят масштабировать свой бизнес и увеличить прибыль", "только начинают свой предпринимательский путь", "чувствуют, что их бизнес находится в зоне “стабильности” и нет роста финансовых показателей в последний год", "пострадали во время пандемии", "не могут самостоятельно решить какую-то задачу или “боль” в своем бизнесе", "погрязли в текучке и рутине", ]
-							.for__list-item=item
+					.for__container
+						.for__info
+							.for__title Для кого этот проект?
+							.for__subtitle Для предпринимателей, которые:
+							.for__list
+								each item in ["хотят масштабировать свой бизнес и увеличить прибыль", "только начинают свой предпринимательский путь", "чувствуют, что их бизнес находится в зоне “стабильности” и нет роста финансовых показателей в последний год", "пострадали во время пандемии", "не могут самостоятельно решить какую-то задачу или “боль” в своем бизнесе", "погрязли в текучке и рутине", ]
+									.for__list-item=item
+						.for__picture
+							.for__picture-user
+							.for__text-btn
+								a.default-btn.scrollto(href="#request") Стать участником
+							
+					
 			section.first#first
 				.wrapper
-					.first__title Первый блок:
-						br
-						| Что ждет героев реалити-шоу?
+					.first__title Что ждет героев реалити-шоу?
 					.first__list
 						.first__list-item
 							.fli
-								.fli__circle 1 шаг.
-								.fli__title АУДИТ БИЗНЕСА
+								.fli__number
+									img(src="img/number-01.svg")
+								.fli__img 
+									img(src="img/audit.svg")
+								.fli__title Аудит бизнеса
 								.fli__text Анализ Вашего бизнеса экспертами и выявления его слабых мест.
 						.first__list-item
 							.fli
-								.fli__circle 2 шаг.
-								.fli__title ДОРОЖНАЯ КАРТА
+								.fli__number
+									img(src="img/number-02.svg")
+								.fli__img 
+									img(src="img/location.svg")
+								.fli__title Дорожная карта
 								.fli__text Проведение стратегической сессии и разработка индивидуального плана развития
 						.first__list-item
 							.fli
-								.fli__circle 3 шаг.
-								.fli__title МАСШТАБИРОВАНИЕ
-								.fli__text В течение 8 недель участники реалити-шоу под наставничеством экспертов, бизнес-трекеров и предпринимателей реализуют план развития и увеличат прибыль
+								.fli__number
+									img(src="img/number-03.svg")
+								.fli__img 
+									img(src="img/sizing.svg")
+								.fli__title Масштабирование
+								.fli__text Реализация плана развития и увеличение прибыли за 1,5 месяца
+				.first__red-block
 			section.peoples.peoples--bg#mentors
 				.wrapper
 					.peoples__title
@@ -263,19 +279,25 @@ html(lang="ru")
 								.p-orgs__item
 									a.partner(href="#")
 										img(src="img/photos/new-partners-"+0+".jpg")
+							.partners__orgs-title 
+								.main-title Официальный партнёр
+							.p-orgs
+								.p-orgs__item
+									a.partner(href="#")
+										img(src="img/photos/new-partners-"+1+".jpg")
+							.partners__orgs-title 
+								.main-title Генеральный информационный партнёр
+							.p-orgs
 								.p-orgs__item
 									a.partner(href="#")
 										img(src="img/photos/new-partners-"+3+".jpg")
-								.p-orgs__item
-									a.partner(href="#")
-										img(src="img/photos/new-partners-"+6+".jpg")
 						.partners__info
 							.partners__info-title 
 								.main-title Информационные партнёры
 							.p-info
 								.p-info__item
 									a.partner(href="#")
-										img(src="img/photos/new-partners-"+1+".jpg")
+										img(src="img/photos/new-partners-"+6+".jpg")
 								.p-info__item
 									a.partner(href="#")
 										img(src="img/photos/new-partners-"+2+".jpg")

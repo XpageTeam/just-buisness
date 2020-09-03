@@ -1,29 +1,56 @@
 .first
 	text-align: center
-	background: #FAF7F4
+	background: #D5604F
 	padding: 90px 0
+	position: relative
 
 	&__title
 		font-weight: bold
 		font-size: 60px
-		color: #472017
 		margin: 0 0 85px
 		line-height: 100%
+		font-style: normal
+		text-align: center
+		color: #FFFFFF
 
 	&__list
 		display: inline-flex
 		justify-content: center
+		margin: 0 0 0 -60px
 
 		&-item
+			z-index: 1
+			width: calc((100% - 60px * 3) / 3)
+			margin: 0 0 0 60px
+			display: flex
+			flex-direction: column
 
-			&:not(:last-child)
-				margin-right: 60px
+	&__red-block
+		height: 200px
+		background: #FAF7F4
+		position: absolute
+		bottom: 0
+		z-index: 0
+		width: 100%
 
 .fli
 	display: flex
+	padding: 25px 53px 43px 53px
 	flex-direction: column
 	align-items: center
+	background: #FFFFFF
+	box-shadow: 0px 4px 40px rgba(252, 177, 166, 0.7)
+	border-radius: 10px
+	flex: 1 1 auto
 
+	&__number
+		position: absolute
+		top: 166px
+		z-index: -1
+
+	&__img
+		width: 30px
+		height: 30px
 	&__circle
 		display: flex
 		align-items: center
@@ -40,14 +67,48 @@
 		line-height: 1
 
 	&__title
-		text-transform: uppercase
-		font-size: 24px
+		margin-top: 25px
+		font-style: normal
 		font-weight: bold
+		font-size: 24px
 		line-height: 100%
-		margin: 0 0 15px
+		text-align: center
+		color: #472017
 
 	&__text
-		font-size: 18px
+		margin-top: 15px
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
 		line-height: 150%
+		text-align: center
+		color: #000000
 		display: inline-block
-		max-width: 370px
+
+@media (max-width: 1100px)
+
+	.fli
+
+		&__text
+			font-size: 12px !important
+		
+		&__title
+			font-size: 18px !important
+
+@media (max-width: 1000px)
+
+	.first
+
+		&__list
+			flex-direction: column
+
+			&-item
+				margin-right: 10px
+				width: auto
+	
+	.fli
+		margin-top: 20px
+		box-shadow: 0px 4px 15px rgba(252,177,166, 0.7)
+
+		&__number
+			display: none
