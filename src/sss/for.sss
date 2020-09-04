@@ -22,11 +22,11 @@
 		&-item
 			background: #FFFFFF
 			border-radius: 10px
-			height: 80px
+			padding: 20px 20px 20px 100px
 			display: flex
 			align-items: center
 			margin-top: 14px
-			padding-left: 50px
+			padding-left: 97px
 			position: relative
 
 			&::before
@@ -38,7 +38,7 @@
 				width: 30px
 				height: 30px
 				position: absolute
-				left: 11px
+				left: 21px
 				background-image: url("../img/for_list-check.svg")
 				background-position: center
 				background-repeat: no-repeat
@@ -57,12 +57,10 @@
 		display: flex
 		flex-direction: column
 		align-items: center
+		position: relative
 		justify-content: center
 		width: 50%
-		background-image: url("../img/for_list-background.svg")
-		background-position: center
-		background-repeat: no-repeat
-		background-position-y: 150px
+		background: url(../img/for_list-background.png) no-repeat center
 
 		&-user
 			margin-top: 115px
@@ -86,6 +84,11 @@
 
 @media (max-width: 850px)
 	.for
+		padding: 40px 0
+
+		&__title
+			font-size: 40px
+
 		&__container
 			flex-direction: column
 		
@@ -96,12 +99,15 @@
 			width: 100%
 			margin-left: 0
 
+			&::before
+				bottom: 97px
+
+			&-user
+				margin-top: 50px
+					
+
 @media (max-width: 360px)
 	.for
-		&__list
-
-			&-item
-				height: 110px
 		
 		&__picture
 
