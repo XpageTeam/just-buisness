@@ -2,16 +2,26 @@
     padding: 90px 0 115px
     overflow: hidden
     display: flex
+    flex-direction: column
     justify-content: space-around
     // max-width: 865px
     // margin-left: auto
     // margin-right: auto
+
+    &-column
+        display: flex
 
     &__orgs
         width: 30%
 
     &__info
         width: 60%
+    
+    &__help
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
 
     &__orgs, &__info
 
@@ -29,6 +39,15 @@
 
             img
                 transform: scale(1.2)
+    
+    .p-help
+        display: flex
+        margin-top: 15px
+        align-items: center
+
+        &__item
+            margin-left: 15px
+            margin-right: 15px
 
     .p-info
         display: flex
@@ -42,6 +61,7 @@
 
     .main-title
         font-size: 2em
+        text-align: center
         line-height: 38px
     //     font-size: em(28)
     //     // cursor: pointer
@@ -179,6 +199,10 @@
 
 @media (max-width: 800px)
     .partners
+
+        &-column
+            flex-direction: column
+
         display: block
 
         &__info
