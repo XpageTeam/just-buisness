@@ -76,6 +76,14 @@ document.addEventListener("DOMContentLoaded", function(){
 			}
 		})
 
+	const voteSlider = new Swiper('.vote__swiper', {
+		slidesPerView: "auto",
+		navigation: {
+			nextEl: '.vote__title-arrow .swiper-button-next',
+			prevEl: '.vote__title-arrow .swiper-button-prev',
+		},
+	})
+
 	const partnersSlider = new Swiper(".partners-list", {
 		slidesPerView: 4,
 		spaceBetween: 30,

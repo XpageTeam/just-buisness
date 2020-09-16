@@ -1,0 +1,77 @@
+.vote
+    padding: 80px 0 50px
+    &__title
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin: 0 0 80px
+        & .main-title
+            margin: 0 auto
+        &-arrow
+            display: flex
+            .swiper-button
+                &-prev, &-next
+                    background: none !important
+                    color: var(--main-color)
+    &__swiper
+        &.swiper-container
+            transform: translateX(-30px)
+            width: calc(100% + 60px)
+            padding: 0 30px 40px
+        &.voted
+            & .vote__person-button
+                pointer-events: none
+                color: #D1B396
+                border: 1px solid #D1B396
+                background: white
+                text-transform: initial
+                &.vote-for
+                    border: 1px solid #C56755
+                    color: #C56755
+    &__person
+        display: flex
+        flex-direction: column
+        width: 100%
+        max-width: 300px
+        &:not(:last-of-type)
+            margin-right: 40px
+        &-photo
+            flex: none
+            img
+                border-radius: 10px
+                display: block
+        &-name
+            color: #472017
+            line-height: 120%
+            flex: 1 1 auto
+            font-size: em(24)
+            margin: 40px 0 0
+            max-width: 255px
+            text-transform: uppercase
+            font-weight: bold
+        &-who
+            color: #BA8D61
+            line-height: 139%
+            min-height: 44px
+            margin: 20px 0 0
+            max-width: 250px
+        &-share
+            display: flex
+            align-items: center
+            margin: 20px 0 40px
+            & a
+                display: flex
+                align-items: center
+                justify-content: center
+                background: #EFE4D7
+                width: 36px
+                height: 36px
+                border-radius: 50%
+                transition: background .3s ease
+                &:hover
+                    border: none
+                    background: #BA8D61
+                &:not(:last-of-type)
+                    margin-right: 20px
+        &-button
+            text-align: center
