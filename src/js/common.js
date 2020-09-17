@@ -78,6 +78,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	const voteSlider = new Swiper('.vote__swiper', {
 		slidesPerView: "auto",
+		autoplay: {
+			disableOnInteraction: false,
+			delay: 2000,
+		},
 		navigation: {
 			nextEl: '.vote__title-arrow .swiper-button-next',
 			prevEl: '.vote__title-arrow .swiper-button-prev',
