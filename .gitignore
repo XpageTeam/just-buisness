@@ -1,6 +1,7 @@
 node_modules/
 accesses/
 docs/
+backup/
 .idea/
 *.zip
 *.rar
