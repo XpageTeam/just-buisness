@@ -1,16 +1,23 @@
 .for
-	text-align: center
+	/* text-align: center */
 	padding: 90px 0
+	background: #FAF7F4
 
 	&__title
 		font-weight: bold
 		font-size: 60px
 		color: #472017
-		margin: 0 0 22px
+		margin: 0 0 15px
 
 	&__subtitle
 		margin: 0 0 70px
+		font-style: normal
+		font-weight: normal
 		font-size: 18px
+<<<<<<< HEAD
+=======
+		line-height: 100%
+>>>>>>> task-new-block
 		color: #C1C1C1
 
 	&__list
@@ -49,6 +56,69 @@
 			margin: 0 0 40px
 
 @media (width <= 1000px) and (width > 660px)
+			background: #FFFFFF
+			border-radius: 10px
+			padding: 20px 20px 20px 100px
+			display: flex
+			align-items: center
+			margin-top: 14px
+			padding-left: 97px
+			position: relative
+
+			&::before
+				content: ""
+				display: block
+				background: #D5604F
+				box-shadow: 0px 4px 40px rgba(213, 96, 79, 0.7)
+				border-radius: 57px
+				width: 30px
+				height: 30px
+				position: absolute
+				left: 21px
+				background-image: url("../img/for_list-check.svg")
+				background-position: center
+				background-repeat: no-repeat
+
+	&__container
+		display: flex
+
+	&__info
+		width: 50%
+
+	&__text-btn
+		margin-top: 62px
+
+	&__picture
+		margin-left: 100px
+		display: flex
+		flex-direction: column
+		align-items: center
+		position: relative
+		justify-content: center
+		width: 50%
+		background: url(../img/for_list-background.png) no-repeat center
+
+		&-user
+			margin-top: 115px
+			background: #D5604F
+			border-radius: 300px
+			width: 300px
+			height: 300px
+			background-image: url("../img/user_img.svg")
+			background-position: center
+			background-repeat: no-repeat
+		
+		&::before
+			content: ""
+			display: block
+			border: 1px solid #E4D4C0
+			box-sizing: border-box
+			border-radius: 300px
+			width: 350px
+			height: 350px
+			position: absolute
+
+@media (max-width: 850px)
 	.for
 		padding: 40px 0
 
@@ -69,3 +139,37 @@
 		&__subtitle
 			font-size: em(22)
 			margin: 0 0 15px
+			font-size: 40px
+
+		&__container
+			flex-direction: column
+		
+		&__info
+			width: 100%
+		
+		&__picture
+			width: 100%
+			margin-left: 0
+
+			&::before
+				bottom: 97px
+
+			&-user
+				margin-top: 50px
+					
+
+@media (max-width: 360px)
+	.for
+		
+		&__picture
+
+			&-user
+				height: 250px
+				width: 250px
+
+			&::before
+				height: 290px
+				width: 290px
+
+
+			

@@ -126,34 +126,50 @@ html(lang="ru")
 							p Еженедельно, по решению Экспертов, шоу будет покидать один из участников проекта. В финале Победитель получит инвестиции на развитие созданного бизнеса. 
 						.about__text-btn
 							a.default-btn.scrollto(href="#request") Стать участником
+			section.for#for
+				.wrapper
+					.for__container
+						.for__info
+							.for__title Для кого этот проект?
+							.for__subtitle Для предпринимателей, которые:
+							.for__list
+								each item in ["хотят масштабировать свой бизнес и увеличить прибыль", "только начинают свой предпринимательский путь", "чувствуют, что их бизнес находится в зоне “стабильности” и нет роста финансовых показателей в последний год", "пострадали во время пандемии", "не могут самостоятельно решить какую-то задачу или “боль” в своем бизнесе", "погрязли в текучке и рутине", ]
+									.for__list-item=item
+						.for__picture
+							.for__picture-user
+							.for__text-btn
+								a.default-btn.scrollto(href="#request") Стать участником
+							
+					
 			section.first#first
 				.wrapper
-					.first__title Первый блок:
-						br
-						| Что ждет героев реалити-шоу?
+					.first__title Что ждет героев реалити-шоу?
 					.first__list
 						.first__list-item
 							.fli
-								.fli__circle 1 шаг.
-								.fli__title АУДИТ БИЗНЕСА
+								.fli__number
+									img(src="img/number-01.svg")
+								.fli__img 
+									img(src="img/audit.svg")
+								.fli__title Аудит бизнеса
 								.fli__text Анализ Вашего бизнеса экспертами и выявления его слабых мест.
 						.first__list-item
 							.fli
-								.fli__circle 2 шаг.
-								.fli__title ДОРОЖНАЯ КАРТА
+								.fli__number
+									img(src="img/number-02.svg")
+								.fli__img 
+									img(src="img/location.svg")
+								.fli__title Дорожная карта
 								.fli__text Проведение стратегической сессии и разработка индивидуального плана развития
 						.first__list-item
 							.fli
-								.fli__circle 3 шаг.
-								.fli__title МАСШТАБИРОВАНИЕ
-								.fli__text В течение 8 недель участники реалити-шоу под наставничеством экспертов, бизнес-трекеров и предпринимателей реализуют план развития и увеличат прибыль
-			section.for#for
-				.wrapper
-					.for__title Для кого этот проект?
-					.for__subtitle Для предпринимателей, которые:
-					.for__list
-						each item in ["хотят масштабировать свой бизнес и увеличить прибыль", "только начинают свой предпринимательский путь", "чувствуют, что их бизнес находится в зоне “стабильности” и нет роста финансовых показателей в последний год", "пострадали во время пандемии", "не могут самостоятельно решить какую-то задачу или “боль” в своем бизнесе", "погрязли в текучке и рутине", ]
-							.for__list-item=item
+								.fli__number
+									img(src="img/number-03.svg")
+								.fli__img 
+									img(src="img/sizing.svg")
+								.fli__title Масштабирование
+								.fli__text Реализация плана развития и увеличение прибыли за 1,5 месяца
+				.first__red-block
 			section.peoples.peoples--bg#mentors
 				.wrapper
 					.peoples__title
@@ -183,7 +199,7 @@ html(lang="ru")
 					.opportunities__title
 						.main-title Возможности
 					.opportunities__list
-						each app, i in ["Инвестиции в ваш бизнес", "Онлайн-курс «120 секунд от Деловой Среды».", "Менторство от лучших предпринимателей региона", "PR-сопровождение вашего бизнеса", "Стажировка в лучших компаниях страны", "Образовательная программа «Азбука предпринимателя» от Территории Бизнеса", ]
+						each app, i in ["Инвестиции в ваш бизнес", "Онлайн-курс «120 секунд от Деловой Среды».", "Менторство от лучших предпринимателей региона", "Стажировка в лучших компаниях страны" ,"PR-сопровождение вашего бизнеса", "Стажировка в лучших компаниях страны", "Образовательная программа «Азбука предпринимателя» от Территории Бизнеса", "Стажировка в лучших компаниях страны",]
 							.opportunities__list-item
 								.apportunity
 									figure.apportunity__img
@@ -256,41 +272,64 @@ html(lang="ru")
 			section.partners-section#partners
 				.wrapper
 					.partners
-						.partners__orgs
-							.partners__orgs-title 
-								.main-title Организаторы
-							.p-orgs
-								.p-orgs__item
+						.partners-column
+							.partners__orgs
+								.partners__orgs-title 
+									.main-title Организаторы
+								.p-orgs
+									.p-orgs__item
+										a.partner(href="#")
+											img(src="img/photos/new-partners-"+0+".jpg")
+								.partners__orgs-title 
+									.main-title Официальный партнёр
+								.p-orgs
+									.p-orgs__item
+										a.partner(href="#")
+											img(src="img/photos/new-partners-"+1+".jpg")
+								.partners__orgs-title 
+									.main-title Генеральный информационный партнёр
+								.p-orgs
+									.p-orgs__item
+										a.partner(href="#")
+											img(src="img/photos/new-partners-"+3+".jpg")
+							.partners__info
+								.partners__info-title 
+									.main-title Информационные партнёры
+								.p-info
+									.p-info__item
+										a.partner(href="#")
+											img(src="img/photos/new-partners-"+6+".jpg")
+									.p-info__item
+										a.partner(href="#")
+											img(src="img/photos/new-partners-"+2+".jpg")
+									.p-info__item
+										a.partner(href="#")
+											img(src="img/photos/new-partners-"+4+".jpg")
+									.p-info__item
+										a.partner(href="#")
+											img(src="img/photos/new-partners-"+5+".jpg")
+									.p-info__item
+										a.partner(href="#")
+											img(src="img/photos/new-partners-"+7+".jpg")
+									.p-info__item
+										a.partner(href="#")
+											img(src="img/photos/logosv.jpg")
+						.partners__help
+							.partners__help-title
+								.main-title Наш проект поддерживают
+							.p-help
+								.p-help__item
 									a.partner(href="#")
-										img(src="img/photos/new-partners-"+0+".jpg")
-								.p-orgs__item
+										img(src="img/photos/helper-"+1+".png")
+								.p-help__item
 									a.partner(href="#")
-										img(src="img/photos/new-partners-"+3+".jpg")
-								.p-orgs__item
+										img(src="img/photos/helper-"+2+".png")
+								.p-help__item
 									a.partner(href="#")
-										img(src="img/photos/new-partners-"+6+".jpg")
-						.partners__info
-							.partners__info-title 
-								.main-title Информационные партнёры
-							.p-info
-								.p-info__item
-									a.partner(href="#")
-										img(src="img/photos/new-partners-"+1+".jpg")
-								.p-info__item
-									a.partner(href="#")
-										img(src="img/photos/new-partners-"+2+".jpg")
-								.p-info__item
+										img(src="img/photos/helper-"+3+".png")
+								.p-help__item
 									a.partner(href="#")
 										img(src="img/photos/new-partners-"+4+".jpg")
-								.p-info__item
-									a.partner(href="#")
-										img(src="img/photos/new-partners-"+5+".jpg")
-								.p-info__item
-									a.partner(href="#")
-										img(src="img/photos/new-partners-"+7+".jpg")
-								.p-info__item
-									a.partner(href="#")
-										img(src="img/photos/logosv.jpg")
 						//- .partners__title
 							.main-title(data-target="0") Организаторы
 							.main-title(data-target="1") Производство проекта
