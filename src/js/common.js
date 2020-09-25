@@ -88,6 +88,19 @@ document.addEventListener("DOMContentLoaded", function(){
 		},
 	})
 
+	const mentorsSlider = new Swiper('.mentors-swiper', {
+		slidesPerView: "auto",
+		loop: true,
+		autoplay: {
+			disableOnInteraction: false,
+			delay: 4000,
+		},
+		navigation: {
+			nextEl: '.peoples__title-arrow .swiper-button-next',
+			prevEl: '.peoples__title-arrow .swiper-button-prev',
+		},
+	})
+
 	const partnersSlider = new Swiper(".partners-list", {
 		slidesPerView: 4,
 		spaceBetween: 30,

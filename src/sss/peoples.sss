@@ -1,12 +1,32 @@
 .peoples
     padding: 80px 0 90px
+    
+    & .swiper-container
+        transform: translateX(-30px)
+        width: calc(100% + 60px)
+        padding: 0 30px 40px
+        & .swiper-slide
+            max-width: 300px
+            margin-right: 40px
 
     &--bg
         background: #FAF7F4
 
     &__title
-        margin: 0 0 70px
-        text-align: center
+        //margin: 0 0 70px
+        //text-align: center
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin: 0 0 80px
+        & .main-title
+            margin: 0 auto
+        &-arrow
+            display: flex
+            .swiper-button
+                &-prev, &-next
+                    background: none !important
+                    color: var(--main-color)
     
     &__list
         display: flex
@@ -14,8 +34,8 @@
         margin: 0 0 -40px -40px
 
         &-item
-            margin: 0 0 40px 40px
-            width: calc((100% - 40px * 4) / 4)
+            //margin: 0 0 40px 40px
+            //width: calc((100% - 40px * 4) / 4)
             display: flex
             flex-direction: column
 
@@ -78,14 +98,6 @@
 
         &__title
             margin: 0 0 20px
-
-        &__list
-            margin: 0 0 -30px -20px
-
-            &-item
-                width: calc((100% - 20px * 2) / 2)
-                margin: 0 0 30px 20px
-
     .people
 
         &__img
@@ -102,13 +114,6 @@
 
         &__title
             margin: 0 0 20px
-
-        &__list
-            margin: 0 0 -30px -20px
-
-            &-item
-                width: calc((100% - 20px * 1) / 1)
-                margin: 0 0 30px 20px
 
     .people
 
